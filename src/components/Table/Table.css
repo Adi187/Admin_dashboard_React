@@ -1,0 +1,133 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px 15px; 
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+tr.selected {
+  background-color: grey;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.actions {
+  display: flex;
+  gap: 10px; 
+}
+
+.actions button {
+  padding: 3px 6px; 
+}
+
+.edit {
+  margin-right: 40px;
+}
+
+.delete-selected {
+  display: flex;
+  margin-top: -35px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  .pagination {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .pagination button {
+    margin: 5px 2px;
+  }
+
+  .delete-selected {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .actions {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .actions button {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+
+  .pagination {
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+
+  }
+
+  .pagination button {
+    margin: 40px 0;
+  }
+
+  .delete-selected {
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .actions button {
+    margin-bottom: 5px;
+  }
+}
+
